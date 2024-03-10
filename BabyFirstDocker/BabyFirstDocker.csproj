@@ -4,18 +4,16 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    
-    <PublishProfile>DefaultContainer</PublishProfile>
-    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
-    <WebPublishMethod>Container</WebPublishMethod>
-    <ContainerRegistry>ghcr.io</ContainerRegistry>
-    <ContainerRepository>jopoloco/baby-first-docker</ContainerRepository>
-    <ContainerImageTag>1.0.1</ContainerImageTag>
+    <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
+    <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
+    <UserSecretsId>840117f3-48e7-4d6b-8b2f-16356cbaa0a2</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Build.Containers" Version="8.0.200" />
-    <ContainerPort Include="80" Type="tcp"/>
+    <ContainerEnvironmentVariable Include="ASPNETCORE_HTTPS_PORTS">
+      <Value>8081</Value>
+    </ContainerEnvironmentVariable>
   </ItemGroup>
 
 </Project>
