@@ -4,16 +4,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
-    <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
-    <UserSecretsId>840117f3-48e7-4d6b-8b2f-16356cbaa0a2</UserSecretsId>
+    <UserSecretsId>d735ade2-8a78-4517-8129-449762529bcc</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <ContainerEnvironmentVariable Include="ASPNETCORE_HTTPS_PORTS">
-      <Value>8081</Value>
-    </ContainerEnvironmentVariable>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
   </ItemGroup>
 
 </Project>
